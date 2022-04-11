@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s
+spec:
+  selector:
+    matchLabels:
+      run: k8s
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: k8s
+    spec:
+      containers:
+        - name: k8s
+          image: lbaf23/gpuinfo:0.1
+          ports:
+            - containerPort: 9000
