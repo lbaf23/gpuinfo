@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: gpuinfo
+  namespace: ptm
+  labels:
+    k8s-app: gpuinfo
+spec:
+  containers:
+  - name: gpuinfo
+    image: localhost:32000/gpuinfo:1.0.0
+    imagePullPolicy: IfNotPresent
+    args: ["python", "main.py"]
+    resources:
+      limits:
+        nvidia.com/gpu: 1
+    ports:
+    - containerPort: 12000
