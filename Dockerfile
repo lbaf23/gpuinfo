@@ -1,4 +1,4 @@
-FROM bitnami/pytorch
+FROM pytorch/pytorch:1.11.0-cuda11.3-cudnn8-runtime
 
 WORKDIR /usr/app
 
@@ -8,6 +8,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY main.py .
 
-EXPOSE 9000
+EXPOSE 12000
 
 CMD ["python", "main.py"]
