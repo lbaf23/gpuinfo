@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gpuinfo
+  namespace: ptm
+  labels:
+    app: gpuinfo
+    component: gpuinfo
+spec:
+  type: NodePort
+  ports:
+    - name: http
+      port: 12000
+      targetPort: 12000
+      protocol: TCP
+      nodePort: 30000
+  selector:
+    app: gpuinfo
