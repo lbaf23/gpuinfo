@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: gpuinfo
-  namespace: ptm
+  namespace: gpuinfo
   labels:
     app: gpuinfo
     component: gpuinfo
@@ -18,12 +18,13 @@ spec:
     spec:
       containers:
       - name: gpuinfo
-        image: localhost:32000/gpuinfo:1.0.0
+        image: lbaf23/gpuinfo:1.0.0
         imagePullPolicy: IfNotPresent
         resources:
           limits:
-            memory: "512Mi"
-            cpu: "500m"
+            memory: "128Mi"
+            cpu: "100m"
             nvidia.com/gpu: 1
         ports:
         - containerPort: 12000
+

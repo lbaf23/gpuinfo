@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gpuinfo
+  annotations:
+    linkerd.io/inject: enabled
+  labels:
+    role: gpuinfo
+    access: gpuinfo
+    istio-injection: enabled
+
