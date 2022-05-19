@@ -1,0 +1,1 @@
+sudo ctr run --rm --gpus 0 docker.io/nvidia/cuda:11.0-base nvidia-smi

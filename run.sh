@@ -1,0 +1,1 @@
+docker run --rm -p 12000:12000 lbaf23/gpuinfo:1.0.0
