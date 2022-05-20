@@ -1,1 +1,1 @@
-docker run --rm nvidia/cuda:11.0.3-base-ubuntu20.04 nvidia-smi
+docker run --rm nvidia/cuda:11.0-base nvidia-smi
